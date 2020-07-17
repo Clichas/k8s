@@ -1,2 +1,2 @@
 # k8s
-starting lab
+learning lab
