@@ -61,7 +61,7 @@ lifecycle: {}
   # preStopCommand: []
 
 nextcloud:
-  host: nextcloud.dflocal
+  host: nextcloud.dflocal.com
   username: admin
   password: admin
   update: 0
