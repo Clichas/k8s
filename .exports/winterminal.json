@@ -1,7 +1,3 @@
-
-// To view the default settings, hold "alt" while clicking on the "Settings" button.
-// For documentation on these settings, see: https://aka.ms/terminal-documentation
-
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
@@ -11,13 +7,13 @@
     {
         "defaults":
         {
-            // Put settings here that you want to apply to all profiles
+            
 			"colorScheme": "Dracula" 
         },
         "list":
         [
             {
-                // Make changes here to the powershell.exe profile
+                
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
@@ -30,7 +26,6 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                // Make changes here to the cmd.exe profile
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "cmd",
                 "commandline": "cmd.exe",
@@ -52,10 +47,10 @@
         ]
     },
 
-    // Add custom color schemes to this array
+
     "schemes": [
         {
-            // Color Scheme: Dracula
+
             "background" : "#282A36",
             "black" : "#21222C",
             "blue" : "#BD93F9",
@@ -78,17 +73,16 @@
         },
 
 ],
-    // Add any keybinding overrides to this array.
-    // To unbind a default keybinding, set the command to "unbound"
+
     "keybindings": [
-	//tabs binds
+
 	{ "command": "newTab", "keys": "ctrl+t" },
 	{ "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+1" },
 	{ "command": { "action": "newTab", "index": 1 }, "keys": "ctrl+2" },
 	{ "command": { "action": "newTab", "index": 2 }, "keys": "ctrl+3" },
 	{ "command": { "action": "newTab", "index": 3 }, "keys": "ctrl+4" },
 	
-	//split binds
+
     { "command": { "action": "splitPane", "split": "vertical" }, "keys": "ctrl+d" },
     { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "ctrl+shift+d" },
     { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
