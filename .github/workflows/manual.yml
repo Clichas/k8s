@@ -10,9 +10,9 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
+        description: 'Job Name'
         # Default value if no value is explicitly provided
-        default: 'World'
+        default: 'teste'
         # Input has to be provided for the workflow to run
         required: true
 
@@ -27,4 +27,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: kubectl apply -f ./run/nginx.yaml -n $KUBE_NAMESPACE
+      run: kubectl apply -f ./run/nginx.yaml -n nginxviagithub
