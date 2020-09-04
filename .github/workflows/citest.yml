@@ -25,6 +25,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: uses my rep
+      uses: ./run
+    - name: create namespace
+      run: kubectl create ns nginxviagit
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: ls -l
+    - name: run nginx deploy
+      run: kubectl apply -f nginx.yaml -n nginxviagit
