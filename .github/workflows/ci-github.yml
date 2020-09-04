@@ -28,7 +28,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # This step checks out a copy of your repository.
-    - uses: Clichas/k8s@v2
+    - uses: Clichas/k8s@v1
       
     - name: create namespace
       run: kubectl create ns nginxviagit || true
