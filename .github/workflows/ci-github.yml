@@ -21,7 +21,6 @@ jobs:
       run: kubectl create ns nginxviagit || true
     # Runs a single command using the runners shell
     - name: run nginx deploy
+      run: git clone https://github.com/Clichas/k8s.git
+    - name: run nginx deploy
       run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
-      run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
-
-te
