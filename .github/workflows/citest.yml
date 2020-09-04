@@ -2,9 +2,12 @@
 
 name: Manual workflow
 
+
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
+  push:
+    branches: master
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
@@ -25,7 +28,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: Clichas/k8s@master
     - name: create namespace
       run: kubectl create ns nginxviagit || true
     # Runs a single command using the runners shell
