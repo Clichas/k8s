@@ -10,5 +10,4 @@ deploy:
   script:
     - kubectl create namespace $KUBE_NAMESPACE || true
     - kubectl apply -f ./run/nginx.yaml -n $KUBE_NAMESPACE
-  tags:
-    - HA
+  runs-on: self-hosted
