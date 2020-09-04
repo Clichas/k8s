@@ -19,7 +19,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: clone rep
-      run: git clone https://github.com/Clichas/k8s.git
+      #run: git clone https://github.com/Clichas/k8s.git
+      run: echo $(ls -l)
+
 
   nginxdeploy:
     # The type of runner that the job will run on
