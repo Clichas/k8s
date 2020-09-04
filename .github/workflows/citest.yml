@@ -25,7 +25,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: Clichas/k8s
+    - uses: Clichas/k8s@v1
     - name: create namespace
       run: kubectl create ns nginxviagit || true
     # Runs a single command using the runners shell
