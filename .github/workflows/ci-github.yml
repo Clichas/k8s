@@ -30,6 +30,12 @@ jobs:
     steps:
     - name: create namespace
       run: kubectl create ns nginxviagit || true
+    # This step checks out a copy of your repository.
+    - uses: Clichas/k8s@v1
+    # This step references the directory that contains the action.
+    - uses: ./.github/actions/nginx  
     # Runs a single command using the runners shell
     - name: run nginx deploy
-      run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
+      run: kubectl apply -f action.yaml -n nginxviagit
+    
+   
