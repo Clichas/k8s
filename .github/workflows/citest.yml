@@ -27,5 +27,5 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: kubectl apply -f ./run/nginx.yaml -n nginxviagithub
+      run: kubectl apply -f nginx.yaml -n nginxviagithub
       working-directory: run
