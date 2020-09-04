@@ -12,7 +12,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  clonning rep:
+  clonningrep:
     # The type of runner that the job will run on
     runs-on: self-hosted
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -21,7 +21,7 @@ jobs:
     - name: clone rep
       run: git clone https://github.com/Clichas/k8s.git
 
-  nginx deploy:
+  nginxdeploy:
     # The type of runner that the job will run on
     runs-on: self-hosted
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -29,7 +29,5 @@ jobs:
     - name: create namespace
       run: kubectl create ns nginxviagit || true
     # Runs a single command using the runners shell
-    - name: run nginx deploy
-      run: git clone https://github.com/Clichas/k8s.git
     - name: run nginx deploy
       run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
