@@ -1,0 +1,14 @@
+variables:
+  KUBE_NAMESPACE: "nginxgitdeploy"
+  DAVID: "Master"
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - kubectl create namespace $KUBE_NAMESPACE || true
+    - kubectl apply -f ./run/nginx.yaml -n $KUBE_NAMESPACE
+  tags:
+    - HA
