@@ -21,5 +21,7 @@ jobs:
     - name: create namespace
       run: kubectl create ns nginxviagit || true
     # Runs a single command using the runners shell
+    
     - name: run nginx deploy
-      run: kubectl apply -f ./nginx.yaml -n nginxviagit
+      run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
+      run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
