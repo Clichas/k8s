@@ -29,7 +29,7 @@ jobs:
     steps:
     # This step checks out a copy of your repository.
     - uses: Clichas/k8s@v1
-    - uses: ./run
+    - uses: ./.github/actions/nginx
     - name: create namespace
       run: kubectl create ns nginxviagit || true
     # Runs a single command using the runners shell
