@@ -33,3 +33,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: run nginx deploy
       run: kubectl apply -f ./run/nginx.yaml -n nginxviagit
+
+
+gteste
