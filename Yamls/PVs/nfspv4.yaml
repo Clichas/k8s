@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pgdata-acid-pgtestcluster-0
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 10.0.0.100 
+    path: /mnt/data/pvpgdata/pgesdatabasetest-0
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pgdata-acid-pgtestcluster-1
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 10.0.0.100 
+    path: /mnt/data/pvpgdata/pgesdatabasetest-1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pgdata-acid-pgtestcluster-2
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 10.0.0.100 
+    path: /mnt/data/pvpgdata/pgesdatabasetest-2

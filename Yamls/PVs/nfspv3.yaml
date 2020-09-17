@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: acid-minimal-cluster-0
+spec:
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+     namespace: default
+     name: acid-minimal-cluster-0
+  nfs:
+    server: 10.0.0.100 
+    path: /mnt/data/pvpgdata/pgesdatabasetest-0
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: acid-minimal-cluster-1
+spec:
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+     namespace: default
+     name: acid-minimal-cluster-1
+  nfs:
+    server: 10.0.0.100 
+    path: /mnt/data/pvpgdata/pgesdatabasetest-1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: acid-minimal-cluster-2
+spec:
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+     namespace: default
+     name: acid-minimal-cluster-2
+  nfs:
+    server: 10.0.0.100 
+    path: /mnt/data/pvpgdata/pgesdatabasetest-2
